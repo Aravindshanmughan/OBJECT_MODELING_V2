@@ -19,6 +19,7 @@ public class User extends BaseEntity {
     public User(String id, String name, Integer score, List<Contest> contests) {
         this(id,name,score);
         this.contests = contests;
+        
     }
 
     public User(String id, String name, Integer score) {

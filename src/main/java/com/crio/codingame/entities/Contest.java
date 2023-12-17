@@ -27,7 +27,7 @@ public class Contest extends BaseEntity{
     public Contest(String name, List<Question> questions, Level level, User creator,
             ContestStatus contestStatus) {
         this.name = name;
-        this.questions = new ArrayList<>();
+        this.questions =questions;
         validateQuestionList(questions, level);
         this.level = level;
         this.creator = creator;
@@ -42,9 +42,9 @@ public class Contest extends BaseEntity{
 
     private void validateQuestionList(List<Question> qList, Level contestLevel) throws InvalidContestException {
         for(Question question:qList){
-            if(question.getLevel().equals(contestLevel)){
-                System.out.println("Same Level");
-            }else throw new InvalidContestException();
+            if(!question.getLevel().equals(contestLevel))
+                throw new InvalidContestException();
+            
             
         }
     }
