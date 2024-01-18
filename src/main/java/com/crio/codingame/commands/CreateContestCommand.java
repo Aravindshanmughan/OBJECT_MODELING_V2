@@ -4,13 +4,10 @@ import java.util.List;
 
 import com.crio.codingame.entities.Contest;
 import com.crio.codingame.entities.Level;
-import com.crio.codingame.entities.Question;
-import com.crio.codingame.exceptions.ContestNotFoundException;
 import com.crio.codingame.exceptions.QuestionNotFoundException;
 import com.crio.codingame.exceptions.UserNotFoundException;
-import com.crio.codingame.repositories.QuestionRepository;
 import com.crio.codingame.services.IContestService;
-import com.crio.codingame.services.QuestionService;
+
 
 public class CreateContestCommand implements ICommand{
 
